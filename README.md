@@ -13,6 +13,12 @@ expo init hennacircleapp-mobile
 cd hennacircleapp-mobile
 ```
 
+## Build and Start
+
+```shell
+npm install
+```
+
 ```shell
 npm start
 ```
