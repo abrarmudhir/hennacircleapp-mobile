@@ -5,4 +5,16 @@
 npm install expo-cli --global
 ```
 
+```shell
+expo init hennacircleapp-mobile
+```
+
+```shell
+cd hennacircleapp-mobile
+```
+
+```shell
+npm start
+```
+
 
