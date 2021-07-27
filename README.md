@@ -13,6 +13,11 @@ expo init hennacircleapp-mobile
 cd hennacircleapp-mobile
 ```
 
+## Install Dependencies
+```shell
+expo install formik styled-components expo-constants
+```
+
 ## Build and Start
 
 ```shell
