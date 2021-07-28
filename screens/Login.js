@@ -35,7 +35,7 @@ const Login = () => {
                 <PageTitle>Henna Circle</PageTitle>
                 <SubTitle>Login with Email</SubTitle>
                 <Formik
-                    initialValues={{email: '', password: 'Your password'}}
+                    initialValues={{email: '', password: ''}}
                     onSubmit={(values) => {
                         console.log(values);
                     }}
