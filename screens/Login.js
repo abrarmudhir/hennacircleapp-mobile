@@ -51,6 +51,16 @@ const Login = () => {
                             value={values.email}
                             keyboardType="email-address"
                         />
+                        <MyTextInput 
+                            label="Password"
+                            icon="lock"
+                            placeholder="Your password"
+                            placeholderTextColor={darkLight}
+                            onChangeText={handleChange('password')}
+                            onBlur={handleBlur('password')}
+                            value={values.password}
+                            secureTextEntry={true}
+                        />
                     </StyledFormArea>)}
                 </Formik>
             </InnerContainer>
