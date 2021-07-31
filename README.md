@@ -18,6 +18,10 @@ cd hennacircleapp-mobile
 expo install formik styled-components expo-constants
 ```
 
+```shell
+expo install @react-native-community/datetimepicker
+```
+
 ## Build and Start
 
 ```shell
