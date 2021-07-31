@@ -13,9 +13,10 @@ export const Colors = {
     brand: "#6D28D9",
     green: "#10B981",
     red: "#EF4444",
+    blue: "#4267B2",
 };
 
-const {primary, secondary, tertiary, darkLight, brand, green, red} = Colors;
+const {primary, secondary, tertiary, darkLight, brand, green, red, blue} = Colors;
 
 export const StyledContainer = styled.View`
     flex: 1;
@@ -28,7 +29,7 @@ export const InnerContainer = styled.View`
     flex: 1;
     width: 100%;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 60px;
 `;
 
 export const PageLogo = styled.Image`
@@ -41,7 +42,7 @@ export const PageTitle = styled.Text`
     text-align: center;
     font-weight: bold;
     color: ${brand};
-    padding: 10px;
+    padding: 5px;
 `;
 
 export const SubTitle = styled.Text`
@@ -90,18 +91,38 @@ export const RightIcon = styled.TouchableOpacity`
 `;
 
 export const StyledButton = styled.TouchableOpacity`
-    padding: 15px;
+    padding: 10px;
     background-color: ${brand};
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    margin-vertical: 5px;
-    height: 60px;
+    margin-vertical: 10px;
+    height: 70px;
+
+    ${(props) => props.facebook == true && `
+        background-color: ${blue};
+        flex-direction: true;
+        justify-content: center;
+    `}
+
+    ${(props) => props.google == true && `
+       background-color: ${green};
+       flex-direction: true;
+       justify-content: center;
+    `}
 `;
 
 export const ButtonText = styled.Text`
     color: ${primary};
     font-size: 16px;
+
+    ${(props) => props.facebook == true && `
+        padding: 5px;
+    `}
+
+    ${(props) => props.google == true && `
+        padding: 5px;
+    `}
 `;
 
 export const MsgBox = styled.Text`
@@ -114,4 +135,28 @@ export const Line = styled.View`
     width: 100%;
     background-color: ${darkLight};
     margin-vertical: 10px;
+`;
+
+export const ExtraView = styled.View`
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+`;
+
+export const ExtraText = styled.Text`
+    justify-content: center;
+    align-content: center;
+    color: ${tertiary};
+    font-size: 15px;
+`;
+
+export const TextLink = styled.TouchableOpacity`
+    justify-content: center;
+    align-items: center;
+`;
+
+export const TextLinkContent = styled.Text`
+    color: ${brand};
+    font-size: 15px;
 `;

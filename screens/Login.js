@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Formik } from 'formik';
 
 // icons
-import {Octicons, Ionicons} from '@expo/vector-icons';
+import {Octicons, Ionicons, Fontisto} from '@expo/vector-icons';
 
 import {
     StyledContainer,
@@ -23,10 +23,15 @@ import {
     Colors,
     MsgBox,
     Line,
+    ExtraView,
+    ExtraText,
+    TextLink,
+    TextLinkContent
+
 } from './../components/styles';
 
 // Colors
-const {brand, darkLight} = Colors;
+const {brand, darkLight, primary} = Colors;
 
 import {View} from 'react-native';
 
@@ -77,17 +82,21 @@ const Login = () => {
                             </ButtonText>
                         </StyledButton>
                         <Line />
-                        <StyledButton onPress={handleSubmit}>
-                            <ButtonText>
-                                Continue with Facebook
-                            </ButtonText>
+                        <StyledButton facebook={true} onPress={handleSubmit}>
+                            <Fontisto name="facebook" color={primary} size={25} />
+                            <ButtonText facebook={true}>Continue with Facebook</ButtonText>
                         </StyledButton>
                         <Line />
-                        <StyledButton onPress={handleSubmit}>
-                            <ButtonText>
-                                Continue with Google
-                            </ButtonText>
+                        <StyledButton google={true} onPress={handleSubmit}>
+                            <Fontisto name="google" color={primary} size={25} />
+                            <ButtonText google={true}>Continue with Google</ButtonText>
                         </StyledButton>
+                        <ExtraView>
+                            <ExtraText>Don't have an account already?</ExtraText>
+                            <TextLink>
+                                <TextLinkContent>Signup</TextLinkContent>
+                            </TextLink>
+                        </ExtraView>
                     </StyledFormArea>)}
                 </Formik>
             </InnerContainer>
